@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Additional CSS must be placed after Bootstrap CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <script src="https://kit.fontawesome.com/415be0a2ff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Enchanted Acres</title>
+</head>
+
+<body>
+  <!-- ================================
+    Start Navigation Bar
+    ================================= -->
+  <header>
+    <div class="m-0">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cabins</a>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item active">Cabin One</a>
+                  <a href="#" class="dropdown-item">Cabin Two</a>
+                  <a href="#" class="dropdown-item">Cabin Three</a>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-nav ms-auto">
+              <button type="button" data-toggle="modal" data-target="#reserveModal"
+                class="btn btn-primary">Reservations</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="title">Enchanted Acres</div>
+
+    <!-- Modal -->
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info text-white">
+            <h3 class="modal-title">Reservation Form</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form id="reserveForm">
+                <div class="row-sm-6">
+                  <label class="input-group" for="inputGroupSelect01">Cabin Request</label>
+                  <div class="col-form-label">
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Select...</option>
+                      <option value="1">Cabin One</option>
+                      <option value="2">Cabin Two</option>
+                      <option value="3">Cabin Three</option>
+
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p><a href="contact.html"><button class="btn btn-cancel" data-dismiss="modal">Cancel</button><button
+                          type="submit" class="btn btn-submit">Search</button></a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ================================
+        End Navigation Bar
+  ================================= -->
+
+  <div class="container cabin-container">
+    <h1>Cabin One</h1>
+    <img src="images/treehouse.jpeg" alt="treehouse">
+  </div>
+
+
+  <!-- Image Modal -->
+  <div class="row modal-row">
+    <div class="column">
+      <img src="images/greatroom1.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/master.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/movie.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/outdoor.jpeg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/bathroom2.jpeg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 5</div>
+        <img src="images/greatroom1.jpeg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 5</div>
+        <img src="images/master.jpeg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 5</div>
+        <img src="images/movie.jpeg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 5</div>
+        <img src="images/outdoor.jpeg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 5</div>
+        <img src="images/bathroom2.jpeg" style="width:100%">
+      </div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="row">
+        <div class="column modal-thumbnail">
+          <img class="thumbnail" src="images/greatroom1.jpeg" onclick="currentSlide(1)" alt="Great Room">
+        </div>
+
+        <div class="column">
+          <img class="thumbnail" src="images/master.jpeg" onclick="currentSlide(2)" alt="master">
+        </div>
+
+        <div class="column">
+          <img class="thumbnail" src="images/movie.jpeg" onclick="currentSlide(3)" alt="movies">
+        </div>
+
+        <div class="column">
+          <img class="thumbnail" src="images/outdoor.jpeg" onclick="currentSlide(4)" alt="outdoor">
+        </div>
+
+        <div class="column">
+          <img class="thumbnail" src="images/bathroom2.jpeg" onclick="currentSlide(5)" alt="bath">
+        </div>
+       </div>
+     </div>
+    <div>
+  </div>
+</div>
+
+<div class="about-cabin">
+  <h2>Cabin One details...</h2>
+  <p>
+    Lorem ipsum dolor sit amet, pri movet nominati ei, eam ne sumo clita appetere. Ad pro aliquid admodum expetenda, amet indoctum salutandi at has. Quas essent appetere vel an. Mel ut velit harum fuisset. Solet accusata eum ut, sit facilis suscipiantur cu, ne est congue iriure volutpat. Et has veri accusata, dicunt minimum fierent pro ad.
+
+    Ei duis etiam gloriatur duo, postea nominavi pertinacia eum et. Pri an liber graece. Id legere ceteros duo. Duo ea sonet iudico, qui similique consetetur definitionem at. Doctus singulis cu sit.
+
+    Ius ex corpora conceptam, dicta appellantur ad nam. Vocibus perpetua cu mei, affert omnesque probatus pri cu, mea ne perfecto mediocrem. Id nam saepe conclusionemque, te per malis verear tritani. Movet ridens albucius ex sit, nec eligendi platonem et.
+  </p>
+</div>
+
+    <!-- ================================
+    Start Footer
+  ================================= -->
+
+    <footer>
+      <div class="text-center">
+        <p>
+          Book your luxury cabin today!
+        </p>
+      </div>
+      <div class="background-break">
+        <button type="button" data-toggle="modal" data-target="#reserveModal"
+          class="btn footer-btn">Reservations</button>
+      </div>
+      <div class="footer-box">
+        <div class="row">
+          <div class="col">
+            <div class="footer-title">
+              <h2>Cabins</h2>
+              <div class="footer-link">
+                <ul>
+                  <li class="cabin"><a href="cabinone.html">Cabin One</a></li>
+                  <li class="cabin"><a href="#">Cabin Two</a></li>
+                  <li class="cabin"><a href="#">Cabin Three</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="footer-title">
+              <h2>Contact Us Today</h2>
+              <div class="footer-link">
+                <p>
+                  <a class="foot-con" href="mailto:me.com">enchantedacres.com</a>
+                </p>
+                <p>
+                  <a class="foot-con" href="tel:1-785-843-5800">(800)800-0000</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="footer-title">
+              <h2>Connect with Us</h2>
+              <div class="footer-link-social">
+                <ul class="social-media">
+                  <li><a href="mailto:me.com" target="_blank"><img src="images/envelope (1).svg" alt="..."></a>
+                  </li>
+                  <li><a href="https://facebook.com" target="_blank">
+                      <img src="images/facebook (1).svg" alt="..."></a>
+                  </li>
+                  <li><a href="https://instagram.com" target="_blank">
+                      <img src="images/instagram.svg" alt="..."></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+
+        <p class="created">Created with &#10084;&#xfe0f; 2023</p>
+      </div>
+
+    </footer>
+    <!-- ================================
+        End Footer
+        ================================= -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
