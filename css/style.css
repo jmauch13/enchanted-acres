@@ -48,6 +48,10 @@ a {
   font-family: 'Dancing Script', cursive;
 }
 
+#reserveModal {
+  z-index: 99999;
+}
+
 .menu,
 .submenu {
   margin-left: 1010px;
@@ -567,6 +571,55 @@ nav h1 {
 .about-cabin p {
   color: #565656;
   margin-top: 15px;
+}
+
+.contact-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 65%;
+}
+
+.contact-container img {
+  z-index: 5;
+}
+
+.contact-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  opacity: .2;
+  z-index: 6;
+}
+
+.contact-img img {
+  position: absolute;
+  height: 600px;
+  width: 95%;
+  border: 6px solid #565656;
+  z-index: 2;
+}
+
+.contact-header {
+  margin-top: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+  text-align: center;
+  z-index: 601;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 5px;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 600;
+  margin-bottom: 40px;
+}
+
+#form-btn {
+  align-self: center;
+  z-index: 700;
 }
 
 /* Image Modal */
