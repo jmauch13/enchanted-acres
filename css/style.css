@@ -435,6 +435,24 @@ nav h1 {
   padding: 20px;
 }
 
+.site {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 2.1em;
+  color: #565656;
+}
+
+.real {
+  height: 300px;
+  width: 400px;
+  margin-left: 45px;
+}
+
+.map {
+  margin-left: 150px;
+}
+
 .row {
   margin-top: 25px;
 }
@@ -830,5 +848,63 @@ img.hover-shadow {
     margin-left: 5px;
     margin-right: 5px;
     padding-bottom: 20px;
+  }
+  .contact-img img {
+    height: 650px;
+  }
+  .cabin-container img {
+    width: 70%;
+    height: 250px;
+  }
+  .modal-row img {
+    width: 80px;
+    height: 50px;
+  }
+  .about-cabin {
+    width: 75%;
+  }
+  .mySlides img {
+    height: 200px;
+  }
+  img.thumbnail {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 50px;
+    padding: 3px;
+    opacity: 0.6;
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    height: 30%;
+    max-width: 1200px;
+  }
+  .prev, .next {
+    margin-top: -70px;
+  }
+  .text-block {
+    position: absolute;
+    align-items: center;
+    opacity: .7;
+    margin-top: -365px;
+    margin-left: 5%;
+    margin-right: auto;
+    width: 85%;
+    background-color: #565656;
+    color: white;
+    font-size: 0.5em;
+    padding: 20px;
+  }
+  .container-fluid img {
+    height: 400px;
+  }
+  .real {
+    margin-left: 0;
+  }
+  .map {
+    margin-left: 0;
   }
 }
